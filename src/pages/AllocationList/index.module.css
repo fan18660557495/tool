@@ -1,0 +1,81 @@
+.container {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.content {
+  padding: 20px 16px; /* 左右内边距与Header保持一致 */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 24px;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.creatorName {
+  color: #1d2129;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: 'PingFang SC', sans-serif;
+}
+
+/* 按钮样式统一 */
+.settingsButton {
+  border-color: #e5e6eb;
+  color: #1d2129;
+  border-radius: 3px;
+  padding: 5px 16px;
+}
+
+.settingsButton:hover {
+  border-color: #165dff;
+  color: #165dff;
+}
+
+.primaryButton {
+  background-color: #165dff;
+  border-color: #165dff;
+  border-radius: 3px;
+  padding: 5px 16px 5px 12px;
+}
+
+.primaryButton:hover {
+  background-color: #4080ff;
+  border-color: #4080ff;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .content {
+    padding: 12px; /* 移动端调整内边距 */
+  }
+
+  .toolbar {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .searchBox {
+    width: 100%;
+    justify-content: center;
+  }
+} 

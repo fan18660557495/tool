@@ -1,0 +1,157 @@
+.container {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.content {
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* 分段标题样式 */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sectionIndicator {
+  width: 4px;
+  height: 20px;
+  background-color: #165dff;
+  border-radius: 2px;
+}
+
+.sectionTitle {
+  font-family: 'PingFang SC', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1d2129;
+  line-height: 1.5;
+}
+
+/* 表单行样式 */
+.formRow {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.fieldLabel {
+  font-family: 'PingFang SC', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1d2129;
+  line-height: 1.5714285714285714;
+}
+
+/* 明细部分头部 */
+.detailHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.uploadButton {
+  background-color: #165dff;
+  border-color: #165dff;
+  border-radius: 3px;
+  padding: 5px 16px 5px 12px;
+  font-family: 'PingFang SC', sans-serif;
+}
+
+.uploadButton:hover {
+  background-color: #4080ff;
+  border-color: #4080ff;
+}
+
+/* 底部操作按钮 */
+.footer {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.deleteButton {
+  background-color: #ffffff;
+  border: 1px solid #e5e6eb;
+  color: #1d2129;
+  border-radius: 3px;
+  padding: 5px 16px;
+  font-family: 'PingFang SC', sans-serif;
+}
+
+.deleteButton:hover:not([disabled]) {
+  border-color: #165dff;
+  color: #165dff;
+}
+
+.deleteButton:disabled {
+  color: #c9cdd4;
+  border-color: #e5e6eb;
+  cursor: not-allowed;
+}
+
+.saveButton {
+  background-color: #165dff;
+  border-color: #165dff;
+  border-radius: 3px;
+  padding: 5px 16px;
+  font-family: 'PingFang SC', sans-serif;
+}
+
+.saveButton:hover {
+  background-color: #4080ff;
+  border-color: #4080ff;
+}
+
+/* 页面级样式已移除，使用全局统一样式 */
+
+/* 分页样式统一 */
+.pagination {
+  text-align: right !important;
+  margin-top: 16px !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .content {
+    padding: 12px;
+    gap: 24px;
+  }
+
+  .formRow {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .detailHeader {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+} 

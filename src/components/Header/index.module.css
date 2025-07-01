@@ -1,0 +1,121 @@
+/* 顶部导航栏 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  background: #ffffff;
+  border-bottom: 1px solid #E5E6EB;
+  box-sizing: border-box;
+}
+
+/* 左侧区域 */
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.title {
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1D2129;
+}
+
+/* 右侧区域 */
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* 账套选择器 */
+.accountSelector {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.accountLabel {
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.57;
+  color: #4E5969;
+}
+
+.accountDropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  padding: 5px 8px 5px 12px;
+  min-width: 120px;
+  border: 1px solid #E5E6EB;
+  border-radius: 4px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #4E5969;
+}
+
+.accountDropdown:hover {
+  border-color: #165DFF;
+}
+
+.dropdownIcon {
+  width: 14px;
+  height: 14px;
+  color: #4E5969;
+  transition: transform 0.2s ease;
+}
+
+.accountDropdown:hover .dropdownIcon {
+  color: #165DFF;
+}
+
+/* 用户头像 */
+.userAvatar {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userAvatar:hover {
+  opacity: 0.8;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 12px;
+  }
+  
+  .rightSection {
+    gap: 12px;
+  }
+  
+  .accountDropdown {
+    min-width: 100px;
+    padding: 4px 6px 4px 8px;
+  }
+  
+  .accountLabel {
+    display: none;
+  }
+} 

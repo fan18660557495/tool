@@ -1,0 +1,105 @@
+.modal {
+  border-radius: 6px;
+}
+
+.modal .ant-modal-header {
+  padding: 16px 16px 0 16px;
+  border-bottom: 1px solid #e5e6eb;
+  margin-bottom: 0;
+}
+
+.modal .ant-modal-body {
+  padding: 16px;
+}
+
+.modal .ant-modal-title {
+  font-family: PingFang SC;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1d2129;
+}
+
+.modal .ant-modal-close {
+  top: 16px;
+  right: 16px;
+  width: 16px;
+  height: 16px;
+  color: #1d2129;
+}
+
+.modal .ant-modal-close:hover {
+  color: #165dff;
+}
+
+.modal .ant-modal-close .ant-modal-close-x {
+  width: 16px;
+  height: 16px;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  padding: 12px 0;
+}
+
+.updateTable {
+  border-radius: 0;
+}
+
+.updateTable :global(.ant-table) {
+  border: 1px solid #e5e6eb;
+}
+
+.updateTable :global(.ant-table-thead > tr > th) {
+  background-color: #f2f3f5;
+  border-bottom: 1px solid #e5e6eb;
+  border-right: 1px solid #e5e6eb;
+  padding: 12px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #1d2129;
+  font-family: PingFang SC;
+}
+
+.updateTable :global(.ant-table-tbody > tr > td) {
+  padding: 12px;
+  border-bottom: 1px solid #e5e6eb;
+  border-right: 1px solid #e5e6eb;
+  font-size: 14px;
+  color: #1d2129;
+  font-family: PingFang SC;
+}
+
+.updateTable :global(.ant-table-tbody > tr:nth-child(even)) {
+  background-color: #e8f3ff;
+}
+
+.updateTable :global(.ant-table-tbody > tr:last-child > td) {
+  border-bottom: 1px solid #e5e6eb;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.confirmButton {
+  width: 88px;
+  height: 32px;
+  font-size: 14px;
+  border-radius: 3px;
+  background-color: #165dff;
+  border-color: #165dff;
+  font-family: PingFang SC;
+}
+
+.confirmButton:hover {
+  background-color: #4080ff;
+  border-color: #4080ff;
+} 

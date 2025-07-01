@@ -1,0 +1,246 @@
+.container {
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding-bottom: 80px; /* 为固定底部按钮留出空间 */
+}
+
+.content {
+  padding: 20px 16px; /* 左右内边距与Header保持一致 */
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* 数据源更新提示 */
+.updateNotice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e8f3ff;
+  border-radius: 4px;
+  padding: 7px 8px;
+  margin-bottom: 32px;
+}
+
+.updateContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.updateIcon {
+  color: #165dff;
+  font-size: 14px;
+}
+
+.updateText {
+  color: #1d2129;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.69;
+}
+
+.updateLink {
+  color: #165dff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.69;
+  cursor: pointer;
+}
+
+.updateLink:hover {
+  text-decoration: underline;
+}
+
+/* 步骤区域 */
+.stepSection {
+  margin-bottom: 32px;
+}
+
+.stepHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.stepNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 24px;
+  background-color: #e8f3ff;
+  border: 1px solid #165dff;
+  border-radius: 3px;
+  color: #165dff;
+  font-family: 'DIN Alternate', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.33;
+}
+
+.stepTitle {
+  margin: 0;
+  color: #1d2129;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.stepButton {
+  margin-left: auto;
+  border-radius: 3px;
+  background: #165dff;
+  border-color: #165dff;
+}
+
+/* 表单网格 */
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formItem label {
+  color: #1d2129;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.57;
+}
+
+/* Step5 开始分摊按钮 */
+.allocationButtonContainer {
+  display: flex;
+  justify-content: stretch;
+  width: 100%;
+}
+
+.allocationButton {
+  flex: 1;
+  height: 40px;
+  border-radius: 3px;
+  background: #165dff;
+  border-color: #165dff;
+  font-size: 14px;
+}
+
+/* Step6 分摊结果 */
+.resultActions {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.resultControls {
+  display: flex;
+  justify-content: space-between;
+  alignItems: center;
+  gap: 24px;
+  margin: 16px 0;
+}
+
+.resultSearch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.searchInput {
+  width: 228px;
+}
+
+/* 固定底部按钮 */
+.fixedBottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e6eb;
+  padding: 16px 0;
+  z-index: 1000;
+}
+
+.bottomActions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.deleteButton,
+.saveButton {
+  width: 120px;
+  height: 32px;
+  font-size: 14px;
+}
+
+.deleteButton {
+  background-color: #ffffff;
+  border-color: #e5e6eb;
+  color: #1d2129;
+}
+
+.deleteButton:hover {
+  border-color: #c9cdd4;
+  color: #1d2129;
+}
+
+.saveButton {
+  background-color: #165dff;
+  border-color: #165dff;
+}
+
+.saveButton:hover {
+  background-color: #0e42d2;
+  border-color: #0e42d2;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .formGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stepHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .stepButton {
+    margin-left: 0;
+    align-self: flex-start;
+  }
+  
+  .resultControls {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .resultSearch {
+    max-width: 100%;
+  }
+  
+  .resultActions {
+    margin-left: 0;
+    flex-direction: column;
+    gap: 8px;
+  }
+} 

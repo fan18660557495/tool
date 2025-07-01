@@ -1,0 +1,107 @@
+.downloadModal {
+  border-radius: 6px;
+}
+
+.downloadModal .ant-modal-header {
+  padding: 16px 16px 0 16px;
+  border-bottom: 1px solid #e5e6eb;
+  margin-bottom: 0;
+}
+
+.downloadModal .ant-modal-body {
+  padding: 16px;
+}
+
+.downloadModal .ant-modal-title {
+  font-family: PingFang SC;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1d2129;
+}
+
+.downloadModal .ant-modal-close {
+  top: 16px;
+  right: 16px;
+  width: 16px;
+  height: 16px;
+  color: #1d2129;
+}
+
+.downloadModal .ant-modal-close:hover {
+  color: #165dff;
+}
+
+.downloadModal .ant-modal-close .ant-modal-close-x {
+  width: 16px;
+  height: 16px;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tableContainer {
+  /* 表格容器样式 */
+}
+
+.tableContainer .ant-table {
+  border: 1px solid #e5e6eb;
+  border-radius: 0;
+}
+
+.tableContainer .ant-table-thead > tr > th {
+  background: #f2f3f5;
+  border-bottom: 1px solid #e5e6eb;
+  border-right: 1px solid #e5e6eb;
+  padding: 12px;
+  font-family: PingFang SC;
+  font-weight: 500;
+  font-size: 14px;
+  color: #1d2129;
+}
+
+.tableContainer .ant-table-tbody > tr > td {
+  border-bottom: 1px solid #e5e6eb;
+  border-right: 1px solid #e5e6eb;
+  padding: 12px;
+  font-family: PingFang SC;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1d2129;
+}
+
+.tableContainer .ant-table-tbody > tr:last-child > td {
+  border-bottom: 1px solid #e5e6eb;
+}
+
+.selectedRow {
+  background-color: #e8f3ff !important;
+}
+
+.selectedRow:hover {
+  background-color: #e8f3ff !important;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 12px 16px;
+  margin-top: 12px;
+}
+
+.actions button {
+  height: 32px;
+  padding: 5px 16px;
+  font-size: 14px;
+  font-family: PingFang SC;
+  border-radius: 3px;
+} 

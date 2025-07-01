@@ -1,0 +1,219 @@
+.accountDetail {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 44px;
+}
+
+.formContainer {
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.formWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.avatarSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5714285714285714;
+  color: #1d2129;
+  margin: 0;
+}
+
+.input {
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.5714285714285714;
+  border: 1px solid #e5e6eb;
+  border-radius: 3px;
+  padding: 4px 11px;
+  height: 32px;
+}
+
+.input:focus {
+  border-color: #165dff;
+  box-shadow: 0 0 0 2px rgba(22, 93, 255, 0.1);
+}
+
+.select {
+  width: 100%;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+:global(.accountDetail .ant-select-selector) {
+  border: 1px solid #e5e6eb !important;
+  border-radius: 3px !important;
+  padding: 0 11px !important;
+  height: 32px !important;
+  font-size: 14px !important;
+  line-height: 1.5714285714285714 !important;
+}
+
+:global(.accountDetail .ant-select-single .ant-select-selector) {
+  border-radius: 3px !important;
+}
+
+:global(.accountDetail .ant-select-dropdown) {
+  border-radius: 3px !important;
+}
+
+:global(.accountDetail .ant-select-single:not(.ant-select-customize-input) .ant-select-selector) {
+  border-radius: 3px !important;
+}
+
+:global(.accountDetail .ant-select-selection-item) {
+  line-height: 30px !important;
+  font-size: 14px !important;
+  color: #1d2129 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+:global(.accountDetail .ant-select-selection-placeholder) {
+  line-height: 30px !important;
+  font-size: 14px !important;
+  color: #c9cdd4 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+:global(.accountDetail .ant-select:focus .ant-select-selector) {
+  border-color: #165dff !important;
+  box-shadow: 0 0 0 2px rgba(22, 93, 255, 0.1) !important;
+}
+
+/* 密码输入框样式 */
+:global(.accountDetail .ant-input-password) {
+  border: 1px solid #e5e6eb !important;
+  border-radius: 3px !important;
+  height: 32px !important;
+  padding: 4px 11px !important;
+}
+
+:global(.accountDetail .ant-input-password .ant-input) {
+  border: none !important;
+  padding: 0 !important;
+  font-size: 14px !important;
+  line-height: 1.5714285714285714 !important;
+  height: 22px !important;
+}
+
+:global(.accountDetail .ant-input-password:focus-within) {
+  border-color: #165dff;
+  box-shadow: 0 0 0 2px rgba(22, 93, 255, 0.1);
+}
+
+:global(.accountDetail .ant-input-password .ant-input-suffix) {
+  color: #4e5969 !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 22px !important;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  margin-top: 16px;
+}
+
+.deleteButton {
+  background-color: #ffffff;
+  border: 1px solid #e5e6eb;
+  border-radius: 3px;
+  color: #1d2129;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 5px 16px;
+  height: auto;
+  line-height: 1.5714285714285714;
+}
+
+.deleteButton:hover {
+  border-color: #165dff;
+  color: #165dff;
+}
+
+.saveButton {
+  background-color: #165dff;
+  border: 1px solid #165dff;
+  border-radius: 3px;
+  color: #ffffff;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 5px 16px;
+  height: auto;
+  line-height: 1.5714285714285714;
+}
+
+.saveButton:hover {
+  background-color: #4080ff;
+  border-color: #4080ff;
+}
+
+/* Avatar样式覆盖 */
+:global(.accountDetail .ant-avatar) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .formContainer {
+    width: 100%;
+    max-width: 560px;
+    padding: 0 16px;
+  }
+  
+  .content {
+    padding: 20px 16px;
+  }
+  
+  .buttonGroup {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .deleteButton,
+  .saveButton {
+    width: 100%;
+  }
+} 
