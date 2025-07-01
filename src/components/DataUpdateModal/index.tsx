@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Modal, Button, Table, Checkbox } from 'antd';
 import { CloseOutlined } from '@ant-design/icons';
 import type { ColumnsType } from 'antd/es/table';
@@ -18,20 +18,34 @@ interface DataUpdateModalProps {
 }
 
 const DataUpdateModal: React.FC<DataUpdateModalProps> = ({ visible, onOk, onCancel }) => {
-  const updateData: DataUpdateItem[] = [
+  const [updateData, setUpdateData] = useState<DataUpdateItem[]>([
     { key: '1', category: '项目字典', updateTime: '2024/01/15 21:00', checked: false },
     { key: '2', category: '科目字典', updateTime: '2024/01/15 21:00', checked: true },
     { key: '3', category: '科目字典', updateTime: '2024/01/30 21:00', checked: false },
     { key: '4', category: '凭证', updateTime: '2024/01/30 21:00', checked: true },
-  ];
+  ]);
+
+  // 全选状态
+  const allChecked = updateData.every(item => item.checked);
+  const indeterminate = updateData.some(item => item.checked) && !allChecked;
+
+  // 单个复选框切换
+  const handleCheckboxChange = (key: string, checked: boolean) => {
+    setUpdateData(prev => prev.map(item => item.key === key ? { ...item, checked } : item));
+  };
+
+  // 全选切换
+  const handleAllChange = (checked: boolean) => {
+    setUpdateData(prev => prev.map(item => ({ ...item, checked })));
+  };
 
   const columns: ColumnsType<DataUpdateItem> = [
     {
-      title: <Checkbox indeterminate={true} />,
+      title: <Checkbox indeterminate={indeterminate} checked={allChecked} onChange={e => handleAllChange(e.target.checked)} />,
       dataIndex: 'checked',
       width: 38,
-      render: (checked: boolean) => (
-        <Checkbox checked={checked} />
+      render: (_: boolean, record: DataUpdateItem) => (
+        <Checkbox checked={record.checked} onChange={e => handleCheckboxChange(record.key, e.target.checked)} />
       ),
     },
     {
@@ -69,6 +83,7 @@ const DataUpdateModal: React.FC<DataUpdateModalProps> = ({ visible, onOk, onCanc
           pagination={false}
           className={styles.updateTable}
           size="middle"
+          rowClassName={(record) => record.checked ? 'selected-row' : ''}
         />
       </div>
     </Modal>

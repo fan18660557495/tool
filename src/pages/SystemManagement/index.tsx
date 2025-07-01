@@ -125,41 +125,6 @@ const SystemManagement: React.FC = () => {
     },
   ];
 
-  // 过滤树形数据的函数
-  const filterTreeData = (data: any[], searchValue: string): any[] => {
-    if (!searchValue) return data;
-    
-    return data.reduce((filtered, node) => {
-      const nodeMatches = (node.title as string).toLowerCase().includes(searchValue.toLowerCase());
-      const filteredChildren = node.children ? filterTreeData(node.children, searchValue) : [];
-      
-      if (nodeMatches || filteredChildren.length > 0) {
-        filtered.push({
-          ...node,
-          children: filteredChildren.length > 0 ? filteredChildren : node.children
-        });
-      }
-      
-      return filtered;
-    }, []);
-  };
-
-  // 自定义下拉渲染
-  const renderDropdown = (menu: React.ReactNode, searchValue: string, setSearchValue: (value: string) => void) => (
-    <div>
-      <div style={{ padding: '8px', borderBottom: '1px solid #e5e6eb' }}>
-        <Input
-          placeholder="搜索"
-          value={searchValue}
-          onChange={(e) => setSearchValue(e.target.value)}
-          prefix={<SearchOutlined style={{ color: '#bfbfbf' }} />}
-          style={{ width: '100%' }}
-        />
-      </div>
-      {menu}
-    </div>
-  );
-
   // 辅助默认值表格列配置
   const auxiliaryColumns = [
     {
@@ -181,12 +146,11 @@ const SystemManagement: React.FC = () => {
         <TreeSelect
           style={{ width: '100%' }}
           value={value === '请选择' ? undefined : value}
-          dropdownStyle={{ maxHeight: 400, overflow: 'auto' }}
-          treeData={filterTreeData(subjectTreeData, subjectSearchValue)}
-          placeholder="请选择"
+          treeData={subjectTreeData}
+          placeholder="搜索"
           treeDefaultExpandAll
-          bordered={false}
-          dropdownRender={(menu) => renderDropdown(menu, subjectSearchValue, setSubjectSearchValue)}
+          allowClear
+          showSearch
         />
       ),
     },
@@ -207,12 +171,11 @@ const SystemManagement: React.FC = () => {
         <TreeSelect
           style={{ width: '100%' }}
           value={value === '请选择' ? undefined : value}
-          dropdownStyle={{ maxHeight: 400, overflow: 'auto' }}
-          treeData={filterTreeData(defaultValueTreeData, defaultValueSearchValue)}
-          placeholder="请选择"
+          treeData={defaultValueTreeData}
+          placeholder="搜索"
           treeDefaultExpandAll
-          bordered={false}
-          dropdownRender={(menu) => renderDropdown(menu, defaultValueSearchValue, setDefaultValueSearchValue)}
+          allowClear
+          showSearch
         />
       ),
     },
@@ -248,12 +211,11 @@ const SystemManagement: React.FC = () => {
         <TreeSelect
           style={{ width: '100%' }}
           value={value === '请选择' ? undefined : value}
-          dropdownStyle={{ maxHeight: 400, overflow: 'auto' }}
-          treeData={filterTreeData(projectTreeData, projectCodeSearchValue)}
-          placeholder="请选择"
+          treeData={projectTreeData}
+          placeholder="搜索"
           treeDefaultExpandAll
-          bordered={false}
-          dropdownRender={(menu) => renderDropdown(menu, projectCodeSearchValue, setProjectCodeSearchValue)}
+          allowClear
+          showSearch
         />
       ),
     },

@@ -13,6 +13,7 @@ import TransferForm from './pages/TransferForm';
 import AccountManagement from './pages/AccountManagement';
 import AccountDetail from './pages/AccountDetail';
 import SystemManagement from './pages/SystemManagement';
+import ChangePassword from './pages/ChangePassword';
 
 const App: React.FC = () => {
   return (
@@ -34,6 +35,7 @@ const App: React.FC = () => {
           <Route path="/account-management" element={<AccountManagement />} />
           <Route path="/account-detail/:id" element={<AccountDetail />} />
           <Route path="/system-management" element={<SystemManagement />} />
+          <Route path="/change-password" element={<ChangePassword />} />
         </Routes>
       </Router>
     </ConfigProvider>

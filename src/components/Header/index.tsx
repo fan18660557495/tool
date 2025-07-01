@@ -52,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({
       ]}
       onClick={({ key }) => {
         if (key === 'changePassword') {
-          message.info('修改密码功能开发中...');
+          navigate('/change-password');
         } else if (key === 'logout') {
           message.success('已退出登录');
           navigate('/login');
@@ -65,7 +65,7 @@ const Header: React.FC<HeaderProps> = ({
     <header className={styles.header}>
       {/* 左侧 Logo 和标题 */}
       <div className={styles.leftSection}>
-        <img src={logoImg} alt="Logo" className={styles.logo} />
+        <img src={logoImg} alt="Logo" className={styles.logo} style={{cursor: 'pointer'}} onClick={() => navigate('/home')} />
         <span className={styles.title}>财务工具</span>
       </div>
 

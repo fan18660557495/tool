@@ -82,6 +82,14 @@
   border-bottom: 1px solid #e5e6eb;
 }
 
+.updateTable :global(.ant-table-tbody > tr.selected-row) {
+  background-color: #e8f3ff !important;
+}
+
+.updateTable :global(.ant-table-tbody > tr) {
+  background-color: #fff !important;
+}
+
 .footer {
   display: flex;
   justify-content: flex-end;
