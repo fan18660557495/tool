@@ -3,8 +3,10 @@ import { Card, Row, Col } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import Header from '../../components/Header';
 import styles from './index.module.css';
-import aiIcon from '../../assets/ai-icon.webp';
-import settingsIcon from '../../assets/settings-icon.webp';
+import homeIcon1 from '../../assets/home-icon-1.webp';
+import homeIcon2 from '../../assets/home-icon-2.webp';
+import homeIcon3 from '../../assets/home-icon-3.webp';
+import homeIcon4 from '../../assets/home-icon-4.webp';
 import mainBg from '../../assets/main-bg.webp';
 
 interface CardData {
@@ -24,25 +26,25 @@ const Home: React.FC = () => {
     {
       id: 'jiezhuang',
       title: '结转工具',
-      icon: aiIcon,
+      icon: homeIcon1,
       onClick: () => navigate('/transfer-list')
     },
     {
       id: 'fentan',
       title: '分摊工具',
-      icon: aiIcon,
+      icon: homeIcon2,
       onClick: () => navigate('/allocation-list')
     },
     {
       id: 'system',
       title: '系统管理',
-      icon: settingsIcon,
+      icon: homeIcon3,
       onClick: () => navigate('/system-management')
     },
     {
       id: 'account',
       title: '账户管理',
-      icon: settingsIcon,
+      icon: homeIcon4,
       onClick: () => navigate('/account-management')
     }
   ];
