@@ -3,10 +3,10 @@ import { Card, Row, Col } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import Header from '../../components/Header';
 import styles from './index.module.css';
-import homeIcon1 from '../../assets/home-icon-1.webp';
-import homeIcon2 from '../../assets/home-icon-2.webp';
-import homeIcon3 from '../../assets/home-icon-3.webp';
-import homeIcon4 from '../../assets/home-icon-4.webp';
+import homeIcon1 from '../../assets/home-icon-1.png';
+import homeIcon2 from '../../assets/home-icon-2.png';
+import homeIcon3 from '../../assets/home-icon-3.png';
+import homeIcon4 from '../../assets/home-icon-4.png';
 import mainBg from '../../assets/main-bg.webp';
 
 interface CardData {
