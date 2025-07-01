@@ -2,7 +2,7 @@
 
 ## 📍 在线演示地址
 
-**🔗 演示链接：[https://fan18660557495.github.io/tool](https://fan18660557495.github.io/tool)**
+**🔗 演示链接：[https://fan18660557495.github.io/tool/](https://fan18660557495.github.io/tool/)**
 
 > 📝 注意：首次部署需要等待几分钟GitHub Actions构建完成
 
@@ -117,7 +117,7 @@
 ## 🔗 相关链接
 
 - **源代码仓库**：[https://github.com/fan18660557495/tool](https://github.com/fan18660557495/tool)
-- **在线演示**：[https://fan18660557495.github.io/tool](https://fan18660557495.github.io/tool)
+- **在线演示**：[https://fan18660557495.github.io/tool/](https://fan18660557495.github.io/tool/)
 - **技术文档**：查看仓库README.md
 
 ---
