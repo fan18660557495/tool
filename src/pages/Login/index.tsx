@@ -3,8 +3,8 @@ import { Form, Input, Button, message } from 'antd';
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import styles from './index.module.css';
-import logoImg from '../../assets/logo.png';
-import loginBg from '../../assets/login-bg.png';
+import logoImg from '../../assets/logo.webp';
+import loginBg from '../../assets/login-bg.webp';
 
 interface LoginFormValues {
   username?: string;

@@ -3,9 +3,9 @@ import { Card, Row, Col } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import Header from '../../components/Header';
 import styles from './index.module.css';
-import aiIcon from '../../assets/card-icon/ai-icon.png';
-import settingsIcon from '../../assets/card-icon/settings-icon.png';
-import mainBg from '../../assets/main-bg.png';
+import aiIcon from '../../assets/ai-icon.webp';
+import settingsIcon from '../../assets/settings-icon.webp';
+import mainBg from '../../assets/main-bg.webp';
 
 interface CardData {
   id: string;

@@ -653,7 +653,7 @@ const TransferForm: React.FC = () => {
         {/* Step 1: 填写结转基础信息 */}
         <div className={styles.stepSection}>
           <div className={styles.stepHeader}>
-            <span className={styles.stepNumber}>Step1</span>
+            <span className={styles.stepNumber}>第一步</span>
             <span className={styles.stepTitle}>填写结转基础信息</span>
             <Button 
               type="primary" 
@@ -687,7 +687,7 @@ const TransferForm: React.FC = () => {
         {/* Step 2: 设置结转科目 */}
         <div className={styles.stepSection}>
           <div className={styles.stepHeader}>
-            <span className={styles.stepNumber}>Step2</span>
+            <span className={styles.stepNumber}>第二步</span>
             <span className={styles.stepTitle}>设置结转科目</span>
             <Button 
               type="primary" 
@@ -715,7 +715,7 @@ const TransferForm: React.FC = () => {
         {/* Step 3: 设置结转项目 */}
         <div className={styles.stepSection}>
           <div className={styles.stepHeader}>
-            <span className={styles.stepNumber}>Step3</span>
+            <span className={styles.stepNumber}>第三步</span>
             <span className={styles.stepTitle}>设置结转项目</span>
             <Button 
               type="primary" 
@@ -743,7 +743,7 @@ const TransferForm: React.FC = () => {
         {/* Step 4: 确定辅助默认值 */}
         <div className={styles.stepSection}>
           <div className={styles.stepHeader}>
-            <span className={styles.stepNumber}>Step4</span>
+            <span className={styles.stepNumber}>第四步</span>
             <span className={styles.stepTitle}>确定辅助默认值</span>
           </div>
           <CommonTable
@@ -763,7 +763,7 @@ const TransferForm: React.FC = () => {
         {/* Step 5: 开始结转 */}
         <div className={styles.stepSection}>
           <div className={styles.stepHeader}>
-            <span className={styles.stepNumber}>Step5</span>
+            <span className={styles.stepNumber}>第五步</span>
             <span className={styles.stepTitle}>开始结转</span>
           </div>
           <div className={styles.allocationButtonContainer}>
@@ -781,7 +781,7 @@ const TransferForm: React.FC = () => {
         {/* Step 6: 结转结果 */}
         <div className={styles.stepSection}>
           <div className={styles.stepHeader}>
-            <span className={styles.stepNumber}>Step6</span>
+            <span className={styles.stepNumber}>第六步</span>
             <span className={styles.stepTitle}>结转结果</span>
             <div className={styles.resultActions}>
               <Button 

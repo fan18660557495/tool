@@ -3,7 +3,7 @@ import { Dropdown, Menu, Avatar, message } from 'antd';
 import { DownOutlined, UserOutlined, LockOutlined, LogoutOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import styles from './index.module.css';
-import logoImg from '../../assets/logo.png';
+import logoImg from '../../assets/logo.webp';
 
 interface HeaderProps {
   currentAccount?: string;
